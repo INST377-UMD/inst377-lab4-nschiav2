@@ -1,0 +1,67 @@
+    /* Page background */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #BFE2EC;
+        font-family: Arial, sans-serif;
+      }
+  
+      /* Main heading */
+      h1 {
+        margin: 20px;
+      }
+  
+      /* Container to center content and limit width */
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+  
+      /* Each row of purple boxes */
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+  
+      /* Purple box styling */
+      .section {
+        background-color: #61348c;
+        color: #ffffff;
+        border:3px solid #61348c;
+        border-radius: 50px;
+        border-spacing: 15px;
+        border-collapse: 15px;
+        width: 50%;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      /* Form items in a row */
+      .section form,
+      .section button {
+        display: flex;
+        align-items: center;
+      }
+  
+      /* Spacing for labels, inputs, and buttons */
+      .section label {
+        margin-right: 5px;
+        margin-top:  5px;
+        font-weight: bold;
+      }
+  
+      .section input[type="text"] {
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+      
+      /* Hover effect for buttons */
+      .section button:hover {
+        background-color: #4e2573;
+      }

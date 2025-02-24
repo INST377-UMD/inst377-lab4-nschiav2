@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <title>INST377 Lab 4 JAVA</title>
+  <link rel="stylesheet" href="INST377_Lab4.CSS">
+</head>
+
+
+<body>
+    <h1 id="pageHeading">INST377 Lab 4</h1>
+    <div class="container">
+    
+    <!-- Row 1: "Alert Me" and "Change Color" options -->
+    <div class="row">
+
+        <!-- Alert Me Section -->
+      <div class="section">
+    
+        <form onsubmit="event.preventDefault(); alertMe();">
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" required>
+          <button type="submit">Alert Me</button>
+        </form>
+
+      </div>
+
+      <!-- Change Color Section -->
+      <div class="section">
+        <button onclick="changeColor()">Change Color</button>
+      </div>
+
+    </div>
+
+    <!-- Row 2: Text Tester and Add Text options -->
+    <div class="row">
+        <!-- Text Tester Section -->
+      <div class="section">
+
+        <form onsubmit="event.preventDefault(); validateText();">
+          <label for="textTester">Text Tester:</label>
+          <input type="text" id="textTester">
+          <button type="submit">Validate Text</button>
+        </form>
+
+      </div>
+
+        <!-- Add Text Section -->
+      <div class="section">
+        <button onclick="addText()">Add Text</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Java for interactions on page -->
+  <script type="text/javascript">
+    //// 1. Alert Me Function:
+    function alertMe() {
+      const nameInput = document.getElementById("nameInput");
+      const nameValue = nameInput.value.trim();
+      if(!nameValue) {
+        alert("Please enter your name.");
+      } else {
+        alert("Hi " + nameValue + "!");
+      }
+    }
+
+    //// 2. Change Color Function:
+    function changeColor() {
+      if (document.body.style.backgroundColor === "white") {
+        document.body.style.backgroundColor = "#BFE2EC"; // random blue color (CSS)
+      } else {
+        document.body.style.backgroundColor = "white";
+      }
+    }
+
+    //// 3. Validate Text Function:
+    function validateText() {
+      const textValue = document.getElementById("textTester").value;
+      const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+      if (validation.test(textValue)) {
+        alert("Special Character found BOOOO");
+      } else {
+        alert("No Special Characters found YAYYY");
+      }
+    }
+
+    //// 4. Add Text Function: 
+    function addText() {
+      const heading = document.getElementById("pageHeading");
+      heading.textContent += " More Text AND...";
+    }
+  </script>
+</body>
+
+</html>
+
